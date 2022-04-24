@@ -15,3 +15,8 @@ storage/*.key
 Homestead.yaml
 Homestead.json
 /.vagrant
+
+.env.backup
+.phpunit.result.cache
+/.idea
+/.vscode
