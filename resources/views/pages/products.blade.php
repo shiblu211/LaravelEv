@@ -28,7 +28,7 @@
                             <td>{{ $product->description }}</td>
                             <td>{{ $product->subcategory->title }}</td>
                             <td>{{ $product->price }}</td>
-                            <td>{{ $product->thumbnial }}</td>
+                            <td>{{ $product->thumbnail }}</td>
                             <td>
                                 <form action="{{route('delete.product',$product)}}" method="POST">
                                     @csrf
