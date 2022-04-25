@@ -47,9 +47,9 @@
         <ul class="side-list">
             <li><a href="{{url('/add-subcategory')}}">Add Subcategory</a></li>
         </ul>
-        <a href="#" class="list-group-item list-group-item-action bg-light">Products</a>
+        <a href="{{url('/manage-product')}}" class="list-group-item list-group-item-action bg-light">Products</a>
         <ul class="side-list">
-            <li><a href="#">Add Product</a></li>
+            <li><a href="{{url('/add-product')}}">Add Product</a></li>
         </ul>
     </div>
 </div>

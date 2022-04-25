@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\SubcategoryController;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
@@ -36,3 +37,9 @@ Route::get('/add-subcategory', [SubcategoryController::class, 'create'])->name('
 Route::post('/store-subcategory', [SubcategoryController::class, 'store'])->name('new.subcategory');
 Route::get('/edit-subcategory/{id}', [SubcategoryController::class, 'edit'])->name('edit.subcategory');
 Route::post('/delete-subcategory/{subcategory}', [SubcategoryController::class, 'destroy'])->name('delete.subcategory');
+
+Route::get('/manage-product', [ProductController::class, 'index'])->name('index.product');
+Route::get('/add-product', [ProductController::class, 'create'])->name('add.product');
+Route::post('/store-product', [ProductController::class, 'store'])->name('new.product');
+Route::get('/edit-product/{id}', [ProductController::class, 'edit'])->name('edit.product');
+Route::post('/delete-product/{product}', [ProductController::class, 'destroy'])->name('delete.product');
