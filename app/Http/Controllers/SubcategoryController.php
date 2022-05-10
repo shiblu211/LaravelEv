@@ -6,6 +6,7 @@ use App\Http\Requests\StoreSubcategoryRequest;
 use App\Models\Category;
 use App\Models\Subcategory;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
 
 class SubcategoryController extends Controller
 {
@@ -43,15 +44,13 @@ class SubcategoryController extends Controller
         return Subcategory::create($request->validated());
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
+    public function getList(Request $request){
+        $subcategories = [];
+        if (!empty($request->category)) {
+            $subcategories = DB::table('subcategories')->select('id','title')
+                ->where('category_id',$request->category)->get();
+        }
+        return response()->json(['status' => true, 'data' => $subcategories]);
     }
 
     /**

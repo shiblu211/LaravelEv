@@ -36,6 +36,7 @@
                             <span class="text-danger" id="priceErrorMsg"></span>
                         </div>
                         <div class="mb-3">
+                            {{--Todo image upload--}}
                             <label for="thumbnail" class="form-label"> Thumbnail <sup> *</sup> : </label>
                             <input type="text" id="thumbnail" name="thumbnail" class="form-control"
                                    placeholder="Description">
